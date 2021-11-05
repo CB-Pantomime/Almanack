@@ -12,7 +12,7 @@
 </head>
 
     <!-- that NAV BAR -->
-    <nav class="navbar navbar-dark bg-dark">
+    <!-- <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand">Almanack</a>
           <form class="d-flex">
@@ -21,6 +21,23 @@
             <button class="btn btn-link" type="submit">Profile</button>
           </form>
         </div>
+      </nav> -->
+
+      <nav class="navbar navbar-light" style="background-color: black;">
+        <div class="container-fluid">
+          <a href="/" class="navbar-brand"><img src="https://i.imgur.com/OZ4jMZa.png" alt="Brand" class="img-responsive"></a>
+        {% if user.is_authenticated %}
+        <div class="navbar-menu navbar-end">
+                <span class="navbar-item px-2">Welcome: {{user.username}}</span>
+                <a class="navbar-item px-2" href="{% url 'profile_detail' user.profile.id %}">Profile</a>
+                <a class="navbar-item px-2" href="{% url 'logout' %}">Logout</a>
+            </div>
+        {% else %}
+            <div class="navbar-menu navbar-end">
+            <a class="navbar-item px-2" href="{% url 'signup' %}">Sign Up</a>
+            <a class="navbar-item px-2" href="{% url 'login' %}">Log In</a>
+            </div>
+        {% endif %}
       </nav>
 
       <div class="d-flex flex-column align-items-stretch flex-shrink-0 bg-white side-nav" style="width: 380px;">
