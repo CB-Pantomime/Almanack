@@ -1,4 +1,5 @@
 
+from typing import ContextManager
 from django.shortcuts import redirect, render
 from django.views import View
 from django.views.generic.base import TemplateView
@@ -36,6 +37,7 @@ class Index(TemplateView):
     #     response.status_code = 307
     #     return response
 
+# @login_required(login_url='/accounts/login/')
 class ProfileDetail(DetailView):
 
     model = Profile
@@ -118,11 +120,18 @@ class CityDetail(DetailView):
         context["cities"] = City.objects.all()
         return context
 
+<<<<<<< HEAD
 
 class PostShow(DetailView):
 
     model = Post
     template_name = "post_show.html"
+=======
+class PostShow(DetailView):
+    model = Post
+    template_name = "post_show.html"
+
+>>>>>>> f1bc3a3c06658efe6c7b85dc680456b29e551114
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context["posts"] = Post.objects.all()
@@ -131,6 +140,10 @@ class PostShow(DetailView):
 class PostCreate(View):
 
     def post(self, request, pk):
+<<<<<<< HEAD
+=======
+        
+>>>>>>> f1bc3a3c06658efe6c7b85dc680456b29e551114
         def get_user(request):
             current_user = request.user
             return current_user
@@ -146,18 +159,25 @@ class PostCreate(View):
         # return redirect("cities_detail", pk=pk)
 
 class PostUpdate(UpdateView):
+<<<<<<< HEAD
 
+=======
+>>>>>>> f1bc3a3c06658efe6c7b85dc680456b29e551114
     model = Post
     fields = ['title', 'content', 'image']
     template_name = "post_update.html"
     success_url = "/"
 
 class PostDelete(DeleteView):
+<<<<<<< HEAD
     
+=======
+>>>>>>> f1bc3a3c06658efe6c7b85dc680456b29e551114
     model = Post
     template_name = "post_delete_confirmation.html"
     success_url = "/"
 
+<<<<<<< HEAD
 
 
 
@@ -173,6 +193,8 @@ class PostDelete(DeleteView):
 
 
 
+=======
+>>>>>>> f1bc3a3c06658efe6c7b85dc680456b29e551114
 # class ProfileUpdateView(LoginRequiredMixin, TemplateView):
 #     user_form = UserForm
 #     profile_form = ProfileForm

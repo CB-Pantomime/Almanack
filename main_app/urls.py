@@ -13,9 +13,14 @@ urlpatterns = [
     # path('profile/<int:pk>/posts/<int:pk>')
     # path('redirect/', views.Signup.as_view(), name="signup")
     path('cities', views.Cities.as_view(), name ="cities"),
+<<<<<<< HEAD
     path('cities/<int:pk>/', views.CityDetail.as_view(), name ="city_detail"),
     path('cities/<int:pk>/new-post', views.PostCreate.as_view(), name ="post_create"),
 
+=======
+    path('cities/<int:pk>/', views.CityDetail.as_view(), name="city_detail"),
+    path('cities/<int:pk>/new-post', views.PostCreate.as_view(), name ="post_create"),
+>>>>>>> f1bc3a3c06658efe6c7b85dc680456b29e551114
     path('posts/<int:pk>/', views.PostShow.as_view(), name="post_show"),
     path('posts/<int:pk>/update', views.PostUpdate.as_view(), name="post_update"),
     path('posts/<int:pk>/delete', views.PostDelete.as_view(), name="post_delete"),
