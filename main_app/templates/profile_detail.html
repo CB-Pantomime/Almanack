@@ -38,7 +38,7 @@
               <!-- <p class="card-text">{{post.title}}</p> -->
 
                 <!-- url needs .post? or?  -->
-              <a href=""><button>{{post.title}}</button></a>     
+              <a href="{% url 'post_show' post.id%}"><button>{{post.title}}</button></a>     
 
             </div>
             <div class="card-footer">

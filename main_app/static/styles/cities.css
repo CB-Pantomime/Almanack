@@ -33,7 +33,7 @@
     float: left;
 }
 .all-cities {
-    font-family: 'Comfortaa', cursive;
+    font-family: 'Comfortaa'; 
     font-size: 30px;
     font-weight: 500;
 }
@@ -41,9 +41,16 @@
     text-align: center;
 }
 span   {
-    font-family: 'Comfortaa', cursive;
+    font-family: 'Comfortaa'; 
     font-size: 40px;
     text-decoration: underline;
     font-weight: 700;
 }
 
+/* .navbar-item {
+    font-family: 'Comfortaa', cursive;
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
+    padding-right: 20px;
+} */
